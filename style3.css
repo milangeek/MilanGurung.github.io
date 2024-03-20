@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
+.logo{
+    font-family: "Montserrat Alternates", sans-serif;
+}
+nav{
+    position: fixed;
+    display: flex;
+    top: 0;
+    padding: 15px 30px;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 10;
+    background: #FEDC97;
+    opacity: 0.8;
+}
+.hamburger{
+    display: block;
+    cursor: pointer;
+    padding-left: 9em;
+}
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+
+}
+.nav-item{
+    margin: 16px 0;
+}
+.main{
+    background: #B5B682;
+    padding-top: 60px;
+    height: 100vh;
+   
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+.main2{
+    font-family:"Montserrat Alternates", sans-serif;
+    text-align: center;
+    a{
+        font-size: 10em;
+        font-weight: 600;
+        text-decoration: none;
+        color: rgb(110, 102, 102);
+    }
+}
+.text span{
+    position: absolute;
+    left: 50%;
+    font-size: 1.2em;
+    transform-origin: 0 100px;
+}
+.one h3{
+    font-size: 1em;
+    padding-left: 10%;
+}
+.main h4{
+    font-size: 2em;
+    font-weight: 400;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.circle-text {
+    position: relative;
+    bottom: 20px;
+    animation: rotate-animation 10s infinite;
+}
+.arro{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.about-me{
+    background-color: #7C9885;
+    margin: 10% 20%;
+    padding: 5%;
+    .intro > p{
+        font-size: 2em;
+        padding-bottom: 25px;
+    }    
+}
+.abt-me{
+    padding-top: 80px;
+    font-size: 3em;
+    text-decoration:underline;
+}
+.ftr-works{
+    background-color: brown;
+    margin: 10% 20%;
+    padding: 5%;
+    
+}
+.ftr{
+    display: block;
+    font-size: 3em;
+    font-weight: 700;
+}
+#work-1,
+#work-3{
+    position: relative;
+    left: 60%;
+    background-color: blueviolet;
+    height: 250px;
+    width: 40%;
+}
+#work-2,
+#work-4{
+    position: relative;
+    background-color: blueviolet;
+    height: 250px;
+    width: 40%;
+}
+
+:root {
+    --transition-duration: 0.8s; /* Transition duration variable */
+}
+
+/* Style for the element */
+.btm-brdr {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pseudo-element for the animated border */
+.btm-brdr::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust thickness of the border */
+    background-color: black; /* Adjust color of the border */
+    transition: width var(--transition-duration) ease;
+}
+
+/* Hover effect */
+.btm-brdr:hover::before {
+    width: 100%; /* Make the border span the entire width */
+}
+.onActive{
+    display: none;
+
+}
+.material-symbols-outlined{
+    position: relative;
+    top: 20%;
+}
+.onActive.active{
+    position:fixed;
+    top: 60px;
+    left:0;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2em;
+    z-index: 10;
+    animation-name: from-top;
+    animation-duration: 1s;
+    .menu-btn-open{
+        li{
+            list-style-type: none;
+            text-align: center;
+            padding-bottom: 1em;
+            
+        }
+        height: 85vh;
+    }
+    
+    .three{
+        text-decoration: none;
+        font-size: 3em;
+        color: black;
+    }
+    .three:hover{
+        transition: var(--border-bottom);
+    }
+    footer{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+    .contact-2 a{
+        text-decoration: none;
+        color: black;
+        gap: 1em;
+    }
+    .contct{
+       padding-left: 1em;
+       padding-bottom: 1em;
+    }
+
+
+}
+@keyframes from-top{
+    from {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+@keyframes rotate-animation {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
